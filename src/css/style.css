@@ -1,5 +1,6 @@
 :root {
     --bg-clr: #1d1d1d;
+    --dark-color: #2c2c2c;
     --font-clr: #fff;
     --accent-clr: #ff603d;
 }
@@ -55,6 +56,7 @@ a, button {
     align-items: center;
 }
 .header__navigation li {
+    position: relative;
     margin-left: 60px;
 }
 .header__navigation li:first-child {
@@ -103,8 +105,59 @@ a, button {
     margin-right: 10px;
     color: var(--accent-clr);
 }
-/* header styles end */
 
+
+/* pullmenu styles start */
+.header__pullmenu {
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    left: -240px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background: var(--dark-color);
+}
+.header__pullmenu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 15px / 2);
+    width: 15px;
+    height: 15px;
+    background-color: var(--dark-color);
+    border-radius: 4px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.header__pullmenu-nav {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding: 15px 30px;
+    border-right: 1px solid #585858;
+}
+.header__pullmenu-nav li {
+    margin-left: 0;
+    padding: 13px 0px;
+}
+.header__pullmenu-link {
+    font-size: 15px;
+    font-weight: 400;
+    /* font-style:; */
+    color: var(--font-clr);
+}
+.header__pullmenu-info {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--dark-color);
+    height: inherit;
+}
+/* pullmenu styles end */
+
+
+/* header styles end */
 /* startpage styles start */
 .startpage {
     position: relative;
@@ -136,16 +189,3 @@ a, button {
     z-index: 0;
 }
 /* startpage styles end */
-
-h1 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: #fff;
-    font-size: 8em;
-    z-index: 2;
-    user-select: none;
-}
