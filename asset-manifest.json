@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ispring/static/css/main.f625240e.css",
-    "main.js": "/ispring/static/js/main.b1af0544.js",
+    "main.css": "/ispring/static/css/main.614a1b28.css",
+    "main.js": "/ispring/static/js/main.55ab48f8.js",
     "static/media/montserrat-v25-cyrillic_latin-800italic.ttf": "/ispring/static/media/montserrat-v25-cyrillic_latin-800italic.4b0f23c8557a9f0193fe.ttf",
     "static/media/montserrat-v25-cyrillic_latin-600italic.ttf": "/ispring/static/media/montserrat-v25-cyrillic_latin-600italic.80503c514c19e0d4360e.ttf",
     "static/media/montserrat-v25-cyrillic_latin-500italic.ttf": "/ispring/static/media/montserrat-v25-cyrillic_latin-500italic.82d3148ba4f5ad4f5205.ttf",
@@ -40,11 +40,11 @@
     "static/media/montserrat-v25-cyrillic_latin-100.woff2": "/ispring/static/media/montserrat-v25-cyrillic_latin-100.0778673fa968755c8d60.woff2",
     "static/media/ispring-institute-logo.svg": "/ispring/static/media/ispring-institute-logo.22c9558f24090503001e2978f8fd90bb.svg",
     "index.html": "/ispring/index.html",
-    "main.f625240e.css.map": "/ispring/static/css/main.f625240e.css.map",
-    "main.b1af0544.js.map": "/ispring/static/js/main.b1af0544.js.map"
+    "main.614a1b28.css.map": "/ispring/static/css/main.614a1b28.css.map",
+    "main.55ab48f8.js.map": "/ispring/static/js/main.55ab48f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.f625240e.css",
-    "static/js/main.b1af0544.js"
+    "static/css/main.614a1b28.css",
+    "static/js/main.55ab48f8.js"
   ]
 }
