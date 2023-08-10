@@ -1,4 +1,5 @@
 import React from "react";
+import {CSSTransition} from "react-transition-group";
 import HeaderPullMenu from "./HeaderPullMenu";
 import ispringLogo from "./img/ispring-institute-logo.svg";
 
@@ -13,8 +14,6 @@ class Header extends React.Component<{}, TypeState> {
         this.state = {
             showPullMenu: false,
         }
-
-        // this.pullMenuVisibility = this.pullMenuVisibility.bind(this);
     }
 
     render(): JSX.Element {
@@ -35,7 +34,18 @@ class Header extends React.Component<{}, TypeState> {
                                     Абитуриентам
                                     <svg width="11" height="7" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6.5 6L12 1" stroke="#FF603D" strokeWidth="1.5"/></svg>
                                 </a>
-                                {(this.state.showPullMenu) ? <HeaderPullMenu /> : null}
+                                <CSSTransition 
+                            in={this.state.showPullMenu} 
+                            classNames={{
+                                enter: "alert-enter",
+                                enterActive: "alert-enter-active",
+                                exit: "alert-exit",
+                                exitActive: "alert-exit-active",
+                            }}
+                            timeout={300} 
+                            unmountOnExit>
+                                <HeaderPullMenu />
+                        </CSSTransition>
                             </li>
                             <li onMouseOver={(): void => {
                                 console.log(1)
