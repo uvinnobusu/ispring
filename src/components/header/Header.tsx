@@ -25,31 +25,30 @@ class Header extends React.Component<{}, TypeState> {
                             <img src={ispringLogo} alt="institute ispring"/>
                         </div>
                         <ul className="header__navigation">
-                            <li onClick={(): void => {
-                                this.setState({
-                                    showPullMenu: !this.state.showPullMenu,
-                                })
-                            }}>
-                                <a className="header__navigation-link pullmenu" href="#!">
+                            <li>
+                                <a className="header__navigation-link pullmenu" href="#!" onClick={(): void => {
+                                    this.setState({
+                                        showPullMenu: !this.state.showPullMenu,
+                                    })
+                                }}>
                                     Абитуриентам
                                     <svg width="11" height="7" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6.5 6L12 1" stroke="#FF603D" strokeWidth="1.5"/></svg>
                                 </a>
-                                <CSSTransition 
-                            in={this.state.showPullMenu} 
-                            classNames={{
-                                enter: "alert-enter",
-                                enterActive: "alert-enter-active",
-                                exit: "alert-exit",
-                                exitActive: "alert-exit-active",
-                            }}
-                            timeout={300} 
-                            unmountOnExit>
-                                <HeaderPullMenu />
-                        </CSSTransition>
+                                <CSSTransition nodeRef={React.useRef(null)}
+                                    in={this.state.showPullMenu} 
+                                    classNames={{
+                                        enter: "alert-enter",
+                                        enterActive: "alert-enter-active",
+                                        exit: "alert-exit",
+                                        exitActive: "alert-exit-active",
+                                    }}
+                                    timeout={300} 
+                                    unmountOnExit>
+
+                                    <HeaderPullMenu />
+                                </CSSTransition>
                             </li>
-                            <li onMouseOver={(): void => {
-                                console.log(1)
-                            }}>
+                            <li>
                                 <a className="header__navigation-link" href="#!">
                                     Мероприятия
                                 </a>
