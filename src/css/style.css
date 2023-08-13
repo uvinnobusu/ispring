@@ -170,7 +170,7 @@ a, button {
     background-color: var(--dark-color);
     height: inherit;
     width: calc(100% - 35%);
-    padding: 23px 30px;
+    padding: 22px 30px;
     font-size: 15px;
     line-height: 25px;
 }

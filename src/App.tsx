@@ -23,10 +23,10 @@ class App extends React.Component<TypeProps, TypeState> {
 
   render(): JSX.Element {
     return (
-      <React.StrictMode>
+      <>
         <Header />
         {/* <StartPage /> */}
-      </React.StrictMode>
+      </>
     )
   }
 }

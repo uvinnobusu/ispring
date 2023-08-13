@@ -34,7 +34,7 @@ class Header extends React.Component<{}, TypeState> {
                                     Абитуриентам
                                     <svg width="11" height="7" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6.5 6L12 1" stroke="#FF603D" strokeWidth="1.5"/></svg>
                                 </a>
-                                <CSSTransition nodeRef={React.useRef(null)}
+                                <CSSTransition
                                     in={this.state.showPullMenu} 
                                     classNames={{
                                         enter: "alert-enter",
