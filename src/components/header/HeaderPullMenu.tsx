@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 
 class HeaderPullMenu extends React.Component<{}, {}> {
@@ -50,64 +50,42 @@ class HeaderPullMenu extends React.Component<{}, {}> {
         )
     }
 
-    renderAfterMouseOver(el: NodeListOf<Element>, infoWrapper: Element | null): JSX.Element | undefined {
-        const menuParamsInitialSettings: boolean[] = [true, false, false, false, false];
-        let menuParams: boolean[] = [true, false, false, false, false];
-        if (menuParams[0]) {
-            return (
-                <div>
-                    0
-                </div>
-            )
+    renderAfterMouseOver(el: NodeListOf<Element>, infoWrapper: Element | null): undefined {
+        let defaultItem = `
+            <ul class="">
+                <li>
+                    <a href="#!" class="">Программирование</a>
+                 </li>
+            </ul>
+        `
+        if (infoWrapper !== null) {
+            infoWrapper.innerHTML = defaultItem;
+            el.forEach(item => {
+                item.addEventListener("mouseover", () => {
+                    switch (item) {
+                        case el[0]:
+                            infoWrapper.innerHTML = defaultItem
+                            break;
+                        case el[1]:
+                            infoWrapper.innerHTML = `1`;
+                            break;
+                        case el[2]:
+                            infoWrapper.innerHTML = `2`;
+                            break;
+                        case el[3]:
+                            infoWrapper.innerHTML = `3`;
+                            break;
+                        case el[4]:
+                            infoWrapper.innerHTML = `4`;
+                            break;
+                        default:
+                            infoWrapper.innerHTML = defaultItem;
+                            break;
+                    }  
+                });
+            });
         }
-        if (menuParams[1]) {
-            return (
-                <div>
-                    1
-                </div>
-            )
-        }
-        if (menuParams[2]) {
-            return (
-                <div>
-                    2
-                </div>
-            )
-        }
-        if (menuParams[3]) {
-            return (
-                <div>
-                    3
-                </div>
-            )
-        }
-        if (menuParams[4]) {
-            return (
-                <div>
-                    4
-                </div>
-            )
-        }
-        // el.forEach(item => {
-        //     item.addEventListener("mouseover", () => {
-        //         if (infoWrapper !== null) {
-        //             // infoWrapper.innerHTML = "123";
-        //             switch (item) {
-        //                 case el[0]:
-        //                     menuParams = menuParamsInitialSettings;
-        //                     break;
-        //                 case el[1]:
-        //                     menuParams
-        //             }
-        //         }
-        //     });
-        // });
-
-        for (let i = 0; el.length > i; i++) {
-            el[i].addEventListener("mousemove", (item): void => {
-                
-            })
-        }
+        return undefined;
     }
 }
 
