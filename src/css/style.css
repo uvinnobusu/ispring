@@ -3,6 +3,7 @@
     --dark-color: #2c2c2c;
     --font-clr: #fff;
     --accent-clr: #ff603d;
+    --link-arrow-clr: #8a8a8a;
 }
 
 body {
@@ -90,6 +91,7 @@ a, button {
 .header__navigation-link.pullmenu svg {
     margin-top: 1px;
     margin-left: 8px;
+    transition: .5s;
 }
 
 .header__user-interactions {
@@ -122,14 +124,13 @@ a, button {
     color: var(--accent-clr);
 }
 
-
 /* pullmenu styles start */
 .header__pullmenu {
     margin-top: 50px;
     position: absolute;
     top: 0;
-    left: -240px;
-    width: 600px;
+    left: -270px;
+    width: 670px;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
@@ -165,6 +166,8 @@ a, button {
     color: var(--font-clr);
 }
 .header__pullmenu-info {
+    display: flex;
+    flex-direction: column;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: var(--dark-color);
@@ -173,6 +176,44 @@ a, button {
     padding: 22px 30px;
     font-size: 15px;
     line-height: 25px;
+}
+.pullmenu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pullmenu-list li {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.pullmenu-list li:hover .pullmenu-item svg {
+    margin-left: 8px;
+}
+.pullmenu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--font-clr);
+}
+.pullmenu-item svg {
+    margin-top: 1px;
+    margin-left: 5px;
+    color: var(--font-clr);
+    transition: margin .2s;
+}
+.pullmenu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--bg-clr);
+    background: var(--accent-clr);
+    height: 40px;
+    width: 160px;
 }
 /* pullmenu styles end */
 
