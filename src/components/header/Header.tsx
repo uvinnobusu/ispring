@@ -107,7 +107,7 @@ class Header extends React.Component<{}, TypeState> {
                 </div>
             </header>
             <CSSTransition
-                in={this.state.showBellInfo} 
+                in={this.state.showLoginForm} 
                 classNames={{
                     enter: "alert-enter",
                     enterActive: "alert-enter-active",

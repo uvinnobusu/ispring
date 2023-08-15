@@ -10,7 +10,7 @@ class LoginForm extends React.Component<{}, {}> {
     render(): JSX.Element {
         return (
             <div className="login-form">
-
+                asdasd
             </div>
         )
     }
